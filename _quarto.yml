@@ -4,6 +4,9 @@ project:
 website: 
   title: "MCR"
   navbar: 
+    tools:
+      - icon: github
+        href: https://github.com/mine-cetinkaya-rundel/quarto-pydata-website-completed
     left:
       - href: index.qmd
       - href: blog.qmd
