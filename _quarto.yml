@@ -18,6 +18,3 @@ format:
       light: flatly
       dark: darkly
     toc: true
-
-execute:
-  freeze: auto
