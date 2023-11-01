@@ -1,0 +1,5 @@
+---
+title: "Home"
+---
+
+Welcome to my home page, where I occasionally blog about Palmer Penguins.
