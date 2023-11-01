@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-10-30">
 
 <title>MCR - Islands and species</title>
 <style>
@@ -157,7 +156,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -174,12 +172,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">October 30, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -191,7 +183,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p>In this analysis we take a look at how body masses of penguins vary across islands and species.</p>
-<div id="import-packages-data" class="cell" data-execution_count="5">
+<div id="import-packages-data" class="cell" data-execution_count="1">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -202,11 +194,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>penguins <span class="op">=</span> load_penguins()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section>
-<section id="analysis" class="level1">
-<h1>Analysis</h1>
 <p>The side-by-side box plots reveal that penguins’ body masses across islands and species, except for Gentoo penguins which weigh more, on average.</p>
-<div id="46bf63dd" class="cell" data-execution_count="6">
+<div id="46bf63dd" class="cell" data-execution_count="2">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.boxplot(x <span class="op">=</span> <span class="st">'island'</span>,</span>
@@ -218,14 +207,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>g.set_xlabel(<span class="st">'Island'</span>)</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>g.set_ylabel(<span class="st">'Body Mass'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>Text(0, 0.5, 'Body Mass')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div id="fig-539a35d47e664c97a50115a146a7f1bd-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div>
-<a href="islands-species_files/figure-html/cell-3-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description=": "><img src="islands-species_files/figure-html/cell-3-output-2.png" id="fig-539a35d47e664c97a50115a146a7f1bd-1" class="img-fluid figure-img"></a>
+<a href="across-islands_files/figure-html/cell-3-output-2.png" class="lightbox" data-description=": " data-gallery="quarto-lightbox-gallery-1"><img src="across-islands_files/figure-html/cell-3-output-2.png" id="fig-539a35d47e664c97a50115a146a7f1bd-1" class="img-fluid figure-img"></a>
 </div>
 </figure>
 </div>
@@ -725,7 +714,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox"});</script>
 
 
 
