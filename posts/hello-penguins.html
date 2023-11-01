@@ -161,6 +161,7 @@ div.csl-indent {
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
+    <a href="https://github.com/mine-cetinkaya-rundel/quarto-pydata-website-completed" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -216,11 +217,11 @@ div.csl-indent {
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>Meet the Palmer Penguins!</p>
+<p>Meet the Palmer Penguins!!</p>
 <section id="packages" class="level2">
 <h2 class="anchored" data-anchor-id="packages">Packages</h2>
 <p>For this analysis we’ll use a few packages for visualization and data display.</p>
-<div id="import-packages" class="cell">
+<div id="import-packages" class="cell" data-execution_count="1">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -234,7 +235,7 @@ div.csl-indent {
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>The dataset we’ll use comes from the palmerpenguins package.</p>
-<div id="import-load-data" class="cell">
+<div id="import-load-data" class="cell" data-execution_count="2">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> palmerpenguins <span class="im">import</span> load_penguins</span>
@@ -250,19 +251,19 @@ div.csl-indent {
 </figure>
 </div>
 <p>Let’s take a peek at the data. <a href="#tbl-penguins-head" class="quarto-xref">Table&nbsp;1</a> shows the first five rows of the <code>penguins</code> data frame.</p>
-<div class="cell">
+<div class="cell" data-execution_count="3">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Markdown(penguins.head().to_markdown(index<span class="op">=</span><span class="va">False</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="tbl-penguins-head" class="cell anchored">
+<div id="tbl-penguins-head" class="cell anchored" data-execution_count="3">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-penguins-head-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1: First five rows of the penguins data frame.
 </figcaption>
 <div aria-describedby="tbl-penguins-head-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <table class="table table-sm table-striped small">
 <colgroup>
 <col style="width: 10%">
@@ -352,7 +353,7 @@ Table&nbsp;1: First five rows of the penguins data frame.
 <section id="body-mass-vs.-flipper-length" class="level2">
 <h2 class="anchored" data-anchor-id="body-mass-vs.-flipper-length">Body mass vs.&nbsp;flipper length</h2>
 <p><a href="#fig-penguins" class="quarto-xref">Figure&nbsp;1</a> shows the relationship between body mass and flipper length of penguins.</p>
-<div id="cell-fig-penguins" class="cell">
+<div id="cell-fig-penguins" class="cell" data-execution_count="4">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># from https://github.com/mcnakhaee/palmerpenguins</span></span>
@@ -366,10 +367,10 @@ Table&nbsp;1: First five rows of the penguins data frame.
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>g.set_ylabels(<span class="st">'Body Mass (g)'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<div id="fig-penguins" class="quarto-figure quarto-figure-center anchored" alt="Body mass vs. flipper length of three species of penguins (Adelie, Gentoo, and Chinstrap) showing a positive relationship between the two variables for each species.">
+<div id="fig-penguins" class="quarto-figure quarto-figure-center anchored" alt="Body mass vs. flipper length of three species of penguins (Adelie, Gentoo, and Chinstrap) showing a positive relationship between the two variables for each species." height="662" width="764">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-penguins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="hello-penguins_files/figure-html/fig-penguins-output-1.png" class="lightbox" data-description="Figure&nbsp;1: Body mass vs.&nbsp;flipper length of penguins" data-gallery="quarto-lightbox-gallery-2" title="Body mass vs. flipper length of three species of penguins (Adelie, Gentoo, and Chinstrap) showing a positive relationship between the two variables for each species."><img src="hello-penguins_files/figure-html/fig-penguins-output-1.png" class="img-fluid figure-img" alt="Body mass vs. flipper length of three species of penguins (Adelie, Gentoo, and Chinstrap) showing a positive relationship between the two variables for each species."></a>
+<a href="hello-penguins_files/figure-html/fig-penguins-output-1.png" class="lightbox" data-description="Figure&nbsp;1: Body mass vs.&nbsp;flipper length of penguins" data-gallery="quarto-lightbox-gallery-2" title="Body mass vs. flipper length of three species of penguins (Adelie, Gentoo, and Chinstrap) showing a positive relationship between the two variables for each species."><img src="hello-penguins_files/figure-html/fig-penguins-output-1.png" alt="Body mass vs. flipper length of three species of penguins (Adelie, Gentoo, and Chinstrap) showing a positive relationship between the two variables for each species." width="764" height="662" class="figure-img"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-penguins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Body mass vs.&nbsp;flipper length of penguins
@@ -878,7 +879,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":true,"openEffect":"zoom"});</script>
 
 
 
