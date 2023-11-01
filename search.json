@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Hello, Penguins!\n\n\n\n\n\n\n\n\n\n\n\n\nOct 23, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nIslands and species\n\n\n\n\n\n\n\n\n\n\n\n\nOct 30, 2023\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Welcome to my home page, where I occasionally blog about Palmer Penguins."
+  },
+  {
+    "objectID": "posts/islands-species.html",
+    "href": "posts/islands-species.html",
+    "title": "Islands and species",
+    "section": "",
+    "text": "Introduction\nIn this analysis we take a look at how body masses of penguins vary across islands and species.\n\n\nCode\nimport pandas as pd\nimport seaborn as sns \nfrom palmerpenguins import load_penguins\n\nsns.set_style('whitegrid')\npenguins = load_penguins()\n\n\n\n\nAnalysis\nThe side-by-side box plots reveal that penguins’ body masses across islands and species, except for Gentoo penguins which weigh more, on average.\n\n\nCode\ng = sns.boxplot(x = 'island',\n            y ='body_mass_g',\n            hue = 'species',\n            data = penguins,\n            palette=['#FF8C00','#159090','#A034F0'],\n            linewidth=0.3)\ng.set_xlabel('Island')\ng.set_ylabel('Body Mass')\n\n\nText(0, 0.5, 'Body Mass (g)')"
+  },
+  {
+    "objectID": "posts/hello-penguins.html",
+    "href": "posts/hello-penguins.html",
+    "title": "Hello, Penguins!",
+    "section": "",
+    "text": "Meet the Palmer Penguins!\n\n\nFor this analysis we’ll use a few packages for visualization and data display.\n\n\nCode\nimport pandas as pd\nimport seaborn as sns \nfrom IPython.display import Markdown\n\nsns.set_style('whitegrid')\n\n\n\n\n\nThe dataset we’ll use comes from the palmerpenguins package.\n\n\nCode\nfrom palmerpenguins import load_penguins\n\npenguins = load_penguins()\n\n\nThis dataset contains size measurements, clutch observations, and blood isotope ratios for 344 adult foraging Adélie, Chinstrap, and Gentoo penguins observed on islands in the Palmer Archipelago near Palmer Station, Antarctica.(Gorman, Williams, and Fraser 2014)\n\n\n\nThree species of penguins\n\n\nLet’s take a peek at the data. Table 1 shows the first five rows of the penguins data frame.\n\n\nCode\nMarkdown(penguins.head().to_markdown(index=False))\n\n\n\n\nTable 1: First five rows of the penguins data frame.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n2007\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18\n195\n3250\nfemale\n2007\n\n\nAdelie\nTorgersen\nnan\nnan\nnan\nnan\nnan\n2007\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n2007"
+  },
+  {
+    "objectID": "posts/hello-penguins.html#packages",
+    "href": "posts/hello-penguins.html#packages",
+    "title": "Hello, Penguins!",
+    "section": "",
+    "text": "For this analysis we’ll use a few packages for visualization and data display.\n\n\nCode\nimport pandas as pd\nimport seaborn as sns \nfrom IPython.display import Markdown\n\nsns.set_style('whitegrid')"
+  },
+  {
+    "objectID": "posts/hello-penguins.html#data",
+    "href": "posts/hello-penguins.html#data",
+    "title": "Hello, Penguins!",
+    "section": "",
+    "text": "The dataset we’ll use comes from the palmerpenguins package.\n\n\nCode\nfrom palmerpenguins import load_penguins\n\npenguins = load_penguins()\n\n\nThis dataset contains size measurements, clutch observations, and blood isotope ratios for 344 adult foraging Adélie, Chinstrap, and Gentoo penguins observed on islands in the Palmer Archipelago near Palmer Station, Antarctica.(Gorman, Williams, and Fraser 2014)\n\n\n\nThree species of penguins\n\n\nLet’s take a peek at the data. Table 1 shows the first five rows of the penguins data frame.\n\n\nCode\nMarkdown(penguins.head().to_markdown(index=False))\n\n\n\n\nTable 1: First five rows of the penguins data frame.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n2007\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18\n195\n3250\nfemale\n2007\n\n\nAdelie\nTorgersen\nnan\nnan\nnan\nnan\nnan\n2007\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n2007"
+  },
+  {
+    "objectID": "posts/hello-penguins.html#body-mass-vs.-flipper-length",
+    "href": "posts/hello-penguins.html#body-mass-vs.-flipper-length",
+    "title": "Hello, Penguins!",
+    "section": "Body mass vs. flipper length",
+    "text": "Body mass vs. flipper length\nFigure 1 shows the relationship between body mass and flipper length of penguins.\n\n\nCode\n# from https://github.com/mcnakhaee/palmerpenguins\ng = sns.lmplot(x=\"flipper_length_mm\",\n               y=\"body_mass_g\",\n               hue=\"species\",\n               height=7,\n               data=penguins,\n               palette=['#FF8C00','#159090','#A034F0'])\ng.set_xlabels('Flipper Length (mm)')\ng.set_ylabels('Body Mass (g)')\n\n\n\n\n\n\n\n\nFigure 1: Body mass vs. flipper length of penguins"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "is a 🐈 lover"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\nUniversity of California, Los Angeles | Los Angeles, CA Ph.D. in Statistics | Sept 2006 - June 2011\nNew York University | New York, NY B.S in Actuarial Science | Sept 2000 - May 2004"
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "About",
+    "section": "Experience",
+    "text": "Experience\nDuke University | Professor | July 2011 - present\nPosit, PBC | Developer Educator | August 2006 - present"
+  }
+]
